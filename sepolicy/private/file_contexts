@@ -21,3 +21,7 @@
 
 # DT2W Script
 /vendor/bin/dt2w_event  u:object_r:dt2w_event_exec:s0
+
+# Light
+/vendor/bin/hw/android\.hardware\.light-service\.even      u:object_r:hal_light_default_exec:s0
+
