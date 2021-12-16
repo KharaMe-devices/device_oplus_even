@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.even
+    android.hardware.light-service.even
 
 # MTK IMS Overlays
 PRODUCT_PACKAGES += \
