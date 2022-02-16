@@ -22,36 +22,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- If true, the screen can be rotated via the accelerometer in all 4
-         rotations as the default behavior. -->
-     <bool name="config_allowAllRotations">false</bool>
-
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
      <bool name="config_automatic_brightness_available">true</bool>
 
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_bluetooth_hfp_inband_ringing_support">false</bool>
-
-    <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-     <bool name="config_bluetooth_le_peripheral_mode_supported">false</bool>
-
-    <!-- Whether camera shutter sound is forced or not  (country specific). -->
-     <bool name="config_camera_sound_forced">true</bool>
-
     <!-- Whether device has screen with higher aspect ratio -->
      <bool name="config_haveHigherAspectRatioScreen">true</bool>
-
-	
-	<!-- Flag specifying whether VoLTE should be available for carrier: independent of
-         carrier provisioning. If false: hard disabled. If true: then depends on carrier
-         provisioning, availability etc -->
-     <bool name="config_carrier_volte_available">false</bool>
-
-    <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
-         carrier provisioning. If false: hard disabled. If true: then depends on carrier
-         provisioning, availability etc -->
-     <bool name="config_carrier_wfc_ims_available">false</bool>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
      <bool name="config_cellBroadcastAppLinks">true</bool>
@@ -61,9 +37,6 @@
 
     <!-- Flag specifying whether VT is available on device -->
      <bool name="config_device_vt_available">true</bool>
-
-    <!-- Flag specifying whether WFC over IMS is available on device -->
-     <bool name="config_device_wfc_ims_available">false</bool>
 
     <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
      <bool name="config_displayBlanksAfterDoze">true</bool>
@@ -129,11 +102,6 @@
     -->
      <bool name="config_enableWifiDisplay">true</bool>
 
-    <!-- Whether the display cutout region of the main built-in display should be forced to
-         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
-    -->
-     <bool name="config_fillMainBuiltInDisplayCutout">false</bool>
-
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
 
@@ -142,13 +110,7 @@
 
     <!-- Is the device capable of hot swapping an ICC Card -->
      <bool name="config_hotswapCapable">true</bool>
-
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-     <bool name="config_intrusiveNotificationLed">false</bool>
-
-    <!-- Should the pinner service pin the Camera application? -->
-     <bool name="config_pinnerCameraApp">false</bool>
-
+	 
     <!-- Should the pinner service pin the Home application? -->
      <bool name="config_pinnerHomeApp">true</bool>
 
@@ -183,34 +145,19 @@
     -->
      <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
-     <bool name="config_setColorTransformAccelerated">false</bool>
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
      <bool name="config_showNavigationBar">true</bool>
-
-    <!-- Flag indicating if the speed up audio on mt call code should be executed -->
-     <bool name="config_speed_up_audio_on_mt_calls">false</bool>
-
-    <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
-     <bool name="config_supportAudioSourceUnprocessed">false</bool>
-
+	 
     <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
-
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_supportSystemNavigationKeys">false</bool>
-
+	 
     <!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
          if the sensor HAL correctly handles the proximity sensor as a wake-up source.
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
      <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
-
-    <!-- True if the device supports Sustained Performance Mode-->
-     <bool name="config_sustainedPerformanceModeSupported">false</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
      <bool name="config_swipe_up_gesture_setting_available">true</bool>
@@ -225,27 +172,9 @@
          in which case a DUN network will be used if required). -->
      <bool name="config_tether_upstream_automatic">true</bool>
 
-    <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
-     <bool name="config_unplugTurnsOnScreen">false</bool>
-
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
      <bool name="config_useDevInputEventForAudioJack">true</bool>
-
-    <!-- Set to true if the wifi display supports compositing content stored
-         in gralloc protected buffers.  For this to be true, there must exist
-         a protected hardware path for surface flinger to composite and send
-         protected buffers to the wifi display video encoder.
-         If this flag is false, we advise applications not to use protected
-         buffers (if possible) when presenting content to a wifi display because
-         the content may be blanked.
-         This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
-         flag is set for wifi displays.
-    -->
-     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
-
-    <!-- Wifi driver supports batched scan -->
-     <bool name="config_wifi_batched_scan_supported">false</bool>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
@@ -572,28 +501,6 @@
         <item>GPS_LOCK=0</item>
     </string-array>
 
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
-         should be empty. -->
-    <string-array name="config_tether_bluetooth_regexs">
-        <item>bt-pan</item>
-        <item>bt-dun</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         USB interfaces.  If the device doesn't want to support tething over USB this should
-         be empty.  An example would be "usb.*" -->
-    <string-array name="config_tether_usb_regexs">
-        <item>rndis\\d</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
-         should be empty.  An example would be "softap.*" -->
-    <string-array name="config_tether_wifi_regexs">
-        <item>"wlan\\d"</item>
-    </string-array>
-
     <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
          [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
     <!-- the 5th element "resore-time" indicates the number of milliseconds to delay
@@ -727,14 +634,7 @@
         <item>1</item> <!-- COLOR_MODE_BOOSTED -->
     </integer-array>
 
-   <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveBatteryLed">false</bool>
-
-     <!-- Do the battery/notification LEDs support pulsing?
-         Used to decide if we show pulse settings -->
-    <bool name="config_ledCanPulse">false</bool>
-
-        <!-- Exempt ImsService from privacy (location) indicators -->
+    <!-- Exempt ImsService from privacy (location) indicators -->
     <string name="config_systemAudioIntelligence" translatable="false">com.mediatek.ims</string>
     
     <!-- Whether to cancel fingerprint operation if not idle -->
