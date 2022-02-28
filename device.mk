@@ -108,6 +108,10 @@ PRODUCT_PACKAGES += \
     libsuspend \
     android.hardware.health@2.0
 
+# Libxml2
+PRODUCT_PACKAGES += \
+    libxml2.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.even
