@@ -108,6 +108,15 @@ PRODUCT_PACKAGES += \
     libsuspend \
     android.hardware.health@2.0
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    libkeymaster4.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libsoft_attestation_cert.vendor:64 \
+    libpuresoftkeymasterdevice.vendor:64
+
 # Libxml2
 PRODUCT_PACKAGES += \
     libxml2.vendor
