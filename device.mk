@@ -32,7 +32,7 @@ $(call inherit-product, packages/apps/RealmeDirac/dirac.mk)
 $(call inherit-product, packages/apps/RealmeParts/parts.mk)
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
@@ -43,7 +43,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Extra VNDK Versions
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
+PRODUCT_EXTRA_VNDK_VERSIONS := 31
 
 # Audio
 PRODUCT_PACKAGES += \
