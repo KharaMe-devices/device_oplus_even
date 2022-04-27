@@ -28,12 +28,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # IMS
 $(call inherit-product, vendor/realme/even-ims/even-ims.mk)
 
-# RealmeDirac
-$(call inherit-product, packages/apps/RealmeDirac/dirac.mk)
-
-# RealmeParts
-$(call inherit-product, packages/apps/RealmeParts/parts.mk)
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -131,7 +125,6 @@ PRODUCT_PACKAGES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.controls.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.controls.xml \
-    $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
 # Power
 PRODUCT_PACKAGES += \
@@ -139,11 +132,20 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/power/powercontable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powercontable.xml \
-    $(DEVICE_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml
-	$(LOCAL_PATH)/configs/power/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml \
+    $(DEVICE_PATH)/configs/power/powerscntbl.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerscntbl.xml \
+	$(DEVICE_PATH)/configs/power/power_app_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/power_app_cfg.xml
+
 # Properties
--include $(DEVICE_PATH)/system_prop.mk
+include $(DEVICE_PATH)/system_prop.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
+# Dirac
+PRODUCT_PACKAGES += \
+    RealmeDirac
+
+# Parts
+PRODUCT_PACKAGES += \
+    RealmeParts
 
 # Recovery
 PRODUCT_PACKAGES += \
