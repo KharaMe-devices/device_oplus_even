@@ -72,6 +72,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/dt2w/dt2w_event:$(TARGET_COPY_OUT_VENDOR)/bin/dt2w_event
 
+# Overlays
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # fastbootd
 PRODUCT_PACKAGES += \
