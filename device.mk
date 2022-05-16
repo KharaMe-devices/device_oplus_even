@@ -63,14 +63,11 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GoogleCameraGo
-	
+    Camera
+
 # DT2W
 PRODUCT_PACKAGES += \
     DT2W-Service-even
-	
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/dt2w/dt2w_event:$(TARGET_COPY_OUT_VENDOR)/bin/dt2w_event
 
 # Overlays
 PRODUCT_PACKAGES += \
