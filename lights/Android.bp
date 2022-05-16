@@ -15,15 +15,16 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.lightservice.even",
+    name: "android.hardware.light@2.0-service.even",
     proprietary: true,
-    init_rc: ["android.hardware.light-service.even.rc"],
-    vintf_fragments: ["android.hardware.light-service.even.xml"],
-    srcs: ["main.cpp", "Light.cpp"],
+    init_rc: ["android.hardware.light@2.0-service.even.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.even.xml"],
+    srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libhardware",
-        "libbase",
-        "libbinder_ndk",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "android.hardware.light@2.0",
     ],
-    vendor: true,
 }
