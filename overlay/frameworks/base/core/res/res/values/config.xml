@@ -209,6 +209,10 @@
          dim before the device goes to sleep.
     -->
      <fraction name="config_maximumScreenDimRatio">20.000004%</fraction>
+	 
+	  <!-- See AmbientSensor.AmbientColorTemperatureSensor.
+         The ambient color temperature sensor name. -->
+    <string name="config_displayWhiteBalanceColorTemperatureSensorName">com.google.sensor.color</string>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
