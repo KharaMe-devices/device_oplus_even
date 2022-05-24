@@ -35,7 +35,16 @@ Rear Camera  | Triple : 48MP(Global)/13 MP(India); 2MP(depth); 2MP(Macro)
 Front Camera | Single: 8 MP
 Release Month | 2021, June 9
 
-![Realme C25](https://fdn2.gsmarena.com/vv/pics/realme/realme-c25-1.jpg "Realme C25")
-![Realme C25s](https://fdn2.gsmarena.com/vv/pics/realme/realme-c25s-1.jpg "Realme C25s")
+# Patches
+
+## Encryption Keystore2 patch (must for booting)
+
+* cd system/security && git fetch https://github.com/AOSP-12-RMX2020/android_system_security && git cherry-pick d2bf978444da8d80a71b34c37f1c1853a405935c && cd ../..
+
+## VOLTE Patches
+
+* cd frameworks/opt/net/ims && git fetch https://github.com/AOSP-12-RMX2020/frameworks_opt_net_ims && git cherry-pick 4f35ccb8bf0362c31bf5f074bcb7070da660412a^..3fe1cb7b6b2673adfce2b9232dfaf81375398efb && cd ../../../.. 
+* cd packages/modules/Wifi && git fetch https://github.com/AOSP-12-RMX2020/packages_modules_Wifi && git cherry-pick c6e404695bc451a9667f4893501ef8fe78e1a0b7^..90fc3f6781171dc27fed16b60575f9ea62f02e7a && cd ../../.. 
+* cd frameworks/opt/telephony && git fetch https://github.com/phhusson/platform_frameworks_opt_telephony android-12.0.0_r26-phh && git cherry-pick 6f116d4cdb716072261ecfe532da527182f6dad6 && cd ../../..
 
 Copyright (C) 2022 Lineage OS
