@@ -50,6 +50,9 @@ ro.mtk_perf_response_time=1
 # Power off opt in IPO
 sys.ipo.pwrdncap=2
 
+# Render
+debug.renderengine.backend=skiaglthreaded
+
 # Surfaceflinger
 debug.sf.latch_unsignaled=1
 ro.surface_flinger.has_HDR_display=true
