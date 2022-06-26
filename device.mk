@@ -84,16 +84,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     DT2W-Service-even
 
-# Overlays
-PRODUCT_PACKAGES += \
-    RemovePackages
-
-# Speed up
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    Launcher3QuickStep \
-    Settings \
-    SystemUI
-
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -163,6 +153,11 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
+# Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
@@ -189,6 +184,10 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc
+	
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
@@ -198,6 +197,12 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 # Screen Recorder
 PRODUCT_PACKAGES += \
     ScreenRecorder
+	
+# Speed up
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    Settings \
+    SystemUI
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
