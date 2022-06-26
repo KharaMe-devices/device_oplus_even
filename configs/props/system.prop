@@ -20,8 +20,6 @@ debug.performance.tuning=1
 debug.egl.profiler=1
 debug.egl.hw=1
 debug.composition.type=gpu
-debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
-debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
 
 # HintManager
 debug.hwui.use_hint_manager=true
