@@ -21,10 +21,6 @@ debug.egl.profiler=1
 debug.egl.hw=1
 debug.composition.type=gpu
 
-# HintManager
-debug.hwui.use_hint_manager=true
-debug.hwui.target_cpu_time_percent=30
-
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
